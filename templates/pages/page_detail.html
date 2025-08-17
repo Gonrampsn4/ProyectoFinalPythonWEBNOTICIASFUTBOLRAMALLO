@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block content %}
+<article class="card">
+  <div class="card-body">
+    <h2>{{ page.title }}</h2>
+    <p class="text-muted">Publicado {{ page.created_at|date:"d/m/Y H:i" }}</p>
+    <div>{{ page.content|linebreaks }}</div>
+  </div>
+</article>
+{% endblock %}

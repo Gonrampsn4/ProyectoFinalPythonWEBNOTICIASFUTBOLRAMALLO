@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h2>Últimas Noticias</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    {% for article in articles %}
+    <div style="background-color: white; width: 300px; padding: 15px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h3 style="margin-top: 0; color: #004aad;">{{ article.title }}</h3>
+        <p style="font-size: 14px; color: #777;">{{ article.date }}</p>
+        <p>{{ article.content|truncatewords:30 }}</p>
+        {% if article.team %}
+            <p><strong>Equipo:</strong> {{ article.team.name }}</p>
+        {% endif %}
+    </div>
+    {% empty %}
+    <p>No hay artículos publicados aún.</p>
+    {% endfor %}
+</div>
+{% endblock %}

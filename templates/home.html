@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% block title %}Inicio - Fútbol Europeo{% endblock %}
+{% block content %}
+  <section class="hero mb-4" style="background-image:url('https://www.shutterstock.com/image-photo/united-kingdom-manchester-november-24th-260nw-603100367.jpg');">
+    <div class="hero-content">
+      <span class="hero-kicker">Portada</span>
+      <h1 class="hero-title">Toda la actualidad del fútbol europeo</h1>
+      <p class="mb-3">Noticias, análisis y equipos — estilo diario deportivo.</p>
+      <a class="btn btn-marca me-2" href="{% url 'news_list' %}">Ver Noticias</a>
+      <a class="btn btn-outline-light" href="{% url 'team_list' %}">Ver Equipos</a>
+    </div>
+  </section>
+
+  {% if headline %}
+  <section class="mb-4">
+    <div class="row g-3">
+      <div class="col-lg-7">
+        <div class="news-card">
+          {% if headline.image %}<img src="{{ headline.image.url }}" alt="imagen">{% endif %}
+          <div class="card-body">
+            <h3 class="news-title"><a class="text-decoration-none" href="{% url 'news_detail' slug=headline.slug %}">{{ headline.title }}</a></h3>
+            {% if headline.subtitle %}<p class="text-muted">{{ headline.subtitle }}</p>{% endif %}
+            <p>{{ headline.summary|default:headline.body|striptags|truncatechars:200 }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="row g-3">
+          {% for n in secondary %}
+            <div class="col-12">{% include "partials/news_card.html" with n=n %}</div>
+          {% empty %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endblock %}

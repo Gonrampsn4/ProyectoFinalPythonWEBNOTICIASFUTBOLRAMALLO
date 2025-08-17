@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block title %}Crear/Editar Equipo{% endblock %}
+{% block content %}
+<h2>{{ view.object|default:'Crear equipo' }}</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-success" type="submit">Guardar</button>
+  <a class="btn btn-secondary" href="{% url 'team_list' %}">Volver</a>
+</form>
+{% endblock %}

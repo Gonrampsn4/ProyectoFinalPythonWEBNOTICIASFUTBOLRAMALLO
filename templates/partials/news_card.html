@@ -1,0 +1,18 @@
+
+{# templates/partials/news_card.html #}
+<div class="news-card">
+  {% if n.image %}<img src="{{ n.image.url }}" alt="imagen">{% endif %}
+  <div class="card-body">
+    <h5 class="news-title"><a class="text-decoration-none" href="{% url 'news_detail' slug=n.slug %}">{{ n.title }}</a></h5>
+    {% if n.subtitle %}<p class="text-muted mb-1">{{ n.subtitle }}</p>{% endif %}
+    <p class="mb-2">{{ n.summary|default:n.body|striptags|truncatechars:140 }}</p>
+    {% if n.teams.all %}
+      <p class="mb-2">
+        {% for t in n.teams.all %}
+          <a class="badge text-bg-secondary text-decoration-none" href="{% url 'news_list' %}?team={{ t.id }}">{{ t.name }}</a>
+        {% empty %}{% endfor %}
+      </p>
+    {% endif %}
+    <a class="btn btn-sm btn-marca" href="{% url 'news_detail' slug=n.slug %}">Leer más</a>
+  </div>
+</div>

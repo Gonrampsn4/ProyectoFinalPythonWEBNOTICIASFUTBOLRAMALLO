@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+{% block title %}Perfil{% endblock %}
+{% block content %}
+<h2>Mi Perfil</h2>
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body text-center">
+        {% if profile.avatar %}
+          <img src="{{ profile.avatar.url }}" class="img-fluid rounded-circle mb-3" alt="avatar">
+        {% else %}
+          <div class="border rounded-circle mb-3" style="width:150px;height:150px;display:inline-block;"></div>
+        {% endif %}
+        <h5>{{ request.user.first_name }} {{ request.user.last_name }}</h5>
+        <p class="text-muted">{{ request.user.email }}</p>
+        {% if profile.link %}<p><a href="{{ profile.link }}" target="_blank" rel="noopener">Mi enlace</a></p>{% endif %}
+        {% if profile.birthday %}<p>Cumpleaños: {{ profile.birthday|date:"d/m/Y" }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

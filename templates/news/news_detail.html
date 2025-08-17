@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+<article class="news-card">
+  {% if article.image %}<img src="{{ article.image.url }}" class="card-img-top" alt="imagen">{% endif %}
+  <div class="card-body">
+    <h2>{{ article.title }}</h2>
+    {% if article.subtitle %}<h5 class="text-muted">{{ article.subtitle }}</h5>{% endif %}
+    <p class="text-muted">Publicado {{ article.published_at|date:"d/m/Y H:i" }}</p>
+    {% if article.teams.all %}
+      <p><strong>Equipos:</strong>
+        {% for t in article.teams.all %}
+          <span class="badge text-bg-secondary">{{ t.name }}</span>
+        {% empty %}
+          <span class="text-muted">—</span>
+        {% endfor %}
+      </p>
+    {% endif %}
+    <div>{{ article.body|safe }}</div>
+  </div>
+</article>
+{% endblock %}

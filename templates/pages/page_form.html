@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block title %}Editar/Crear Página{% endblock %}
+{% block content %}
+<h2>{{ view.object|default:'Crear' }}</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-success" type="submit">Guardar</button>
+  <a class="btn btn-secondary" href="{% url 'page_list' %}">Volver</a>
+</form>
+{% endblock %}

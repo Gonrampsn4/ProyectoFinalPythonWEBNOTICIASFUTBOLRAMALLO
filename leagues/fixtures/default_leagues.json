@@ -1,0 +1,23 @@
+[
+  {
+    "model": "leagues.league",
+    "pk": 1,
+    "fields": {
+      "name": "Premier League (ENG)"
+    }
+  },
+  {
+    "model": "leagues.league",
+    "pk": 2,
+    "fields": {
+      "name": "Liga Española (ESP)"
+    }
+  },
+  {
+    "model": "leagues.league",
+    "pk": 3,
+    "fields": {
+      "name": "Serie A (ITA)"
+    }
+  }
+]

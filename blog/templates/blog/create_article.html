@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h2>Crear Artículo</h2>
+<div style="background-color: white; padding: 20px; max-width: 600px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+{% endblock %}

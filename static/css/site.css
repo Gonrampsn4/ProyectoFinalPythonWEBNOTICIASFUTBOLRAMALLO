@@ -1,0 +1,137 @@
+
+/* Base variables inspired by Marca look */
+:root{
+  --marca-red:#d60000;
+  --marca-dark:#111;
+  --marca-text:#222;
+  --marca-muted:#6c757d;
+  --bg-light:#f6f6f6;
+  --card-border:#e7e7e7;
+}
+
+html, body { height:100%; }
+body{
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  color: var(--marca-text);
+  background: var(--bg-light);
+}
+
+/* Header */
+.brandbar{
+  background: var(--marca-red);
+  color:#fff;
+  font-weight:700;
+  letter-spacing:0.5px;
+}
+.brandbar .brand{
+  font-size: 28px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.brandbar a{ color:#fff; text-decoration:none; }
+.brandbar .nav-link{ color:#fff; opacity:.9; }
+.brandbar .nav-link:hover{ opacity:1; }
+
+/* Secondary navbar */
+.nav-secondary{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.nav-secondary .nav-link{
+  color: var(--marca-dark);
+  font-weight:600;
+  text-transform: uppercase;
+  font-size:.95rem;
+  letter-spacing:.02em;
+}
+.nav-secondary .nav-link:hover{
+  color: var(--marca-red);
+}
+
+/* Hero */
+.hero{
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 360px;
+  display:flex;
+  align-items:flex-end;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 100%);
+}
+.hero-content{
+  position: relative;
+  z-index:2;
+  color:#fff;
+  padding:28px;
+}
+.hero-kicker{
+  display:inline-block;
+  background: #fff;
+  color: var(--marca-red);
+  font-weight:800;
+  padding:.15rem .5rem;
+  border-radius:4px;
+  margin-bottom:.5rem;
+  text-transform: uppercase;
+  font-size:.8rem;
+  letter-spacing:.04em;
+}
+.hero-title{
+  font-weight:900;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin:0 0 .35rem 0;
+  line-height:1.1;
+}
+
+/* Cards */
+.news-card{
+  border:1px solid var(--card-border);
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+  height:100%;
+  display:flex; flex-direction:column;
+  box-shadow:0 6px 16px rgba(0,0,0,.04);
+}
+.news-card img{ aspect-ratio: 16 / 9; object-fit:cover; width:100%; }
+.news-card .card-body{ padding:14px 16px; }
+.news-title{ font-weight:800; margin:0 0 .25rem; line-height:1.1; }
+.badge-team{
+  background:#f0f0f0; color:#333; font-weight:700;
+  border-radius:3px; padding:.2rem .4rem; margin-right:.25rem;
+}
+
+/* Footer */
+.site-footer{
+  color:#999; font-size:.9rem;
+}
+
+/* Utilities */
+.btn-marca{ background:var(--marca-red); color:#fff; border:none; }
+.btn-marca:hover{ background:#bb0000; color:#fff; }
+
+
+/* Dark mode */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg-light:#161616;
+    --marca-text:#e6e6e6;
+    --card-border:#2a2a2a;
+  }
+  .nav-secondary, .site-footer, .news-card, .brandbar{ background-color: inherit; }
+}
+[data-theme="dark"]{
+  --bg-light:#161616;
+  --marca-text:#e6e6e6;
+  --card-border:#2a2a2a;
+}
+[data-theme="dark"] .news-card{ background:#1c1c1c; border-color:#2a2a2a; }
+[data-theme="dark"] .nav-secondary{ background:#1a1a1a; border-bottom-color:#2a2a2a; }
+[data-theme="dark"] .site-footer{ background:#1a1a1a; }

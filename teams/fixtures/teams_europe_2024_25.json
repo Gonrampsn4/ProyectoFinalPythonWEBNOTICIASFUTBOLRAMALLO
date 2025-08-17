@@ -1,0 +1,542 @@
+[
+  {
+    "model": "teams.team",
+    "pk": 1,
+    "fields": {
+      "name": "Arsenal",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 2,
+    "fields": {
+      "name": "Aston Villa",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 3,
+    "fields": {
+      "name": "AFC Bournemouth",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 4,
+    "fields": {
+      "name": "Brentford",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 5,
+    "fields": {
+      "name": "Brighton & Hove Albion",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 6,
+    "fields": {
+      "name": "Chelsea",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 7,
+    "fields": {
+      "name": "Crystal Palace",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 8,
+    "fields": {
+      "name": "Everton",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 9,
+    "fields": {
+      "name": "Fulham",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 10,
+    "fields": {
+      "name": "Ipswich Town",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 11,
+    "fields": {
+      "name": "Leicester City",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 12,
+    "fields": {
+      "name": "Liverpool",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 13,
+    "fields": {
+      "name": "Manchester City",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 14,
+    "fields": {
+      "name": "Manchester United",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 15,
+    "fields": {
+      "name": "Newcastle United",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 16,
+    "fields": {
+      "name": "Nottingham Forest",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 17,
+    "fields": {
+      "name": "Southampton",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 18,
+    "fields": {
+      "name": "Tottenham Hotspur",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 19,
+    "fields": {
+      "name": "West Ham United",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 20,
+    "fields": {
+      "name": "Wolverhampton Wanderers",
+      "league": "premier",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 21,
+    "fields": {
+      "name": "Deportivo Alavés",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 22,
+    "fields": {
+      "name": "Athletic Club",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 23,
+    "fields": {
+      "name": "Atlético de Madrid",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 24,
+    "fields": {
+      "name": "FC Barcelona",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 25,
+    "fields": {
+      "name": "RC Celta",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 26,
+    "fields": {
+      "name": "Getafe CF",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 27,
+    "fields": {
+      "name": "Girona FC",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 28,
+    "fields": {
+      "name": "UD Las Palmas",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 29,
+    "fields": {
+      "name": "CD Leganés",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 30,
+    "fields": {
+      "name": "RCD Mallorca",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 31,
+    "fields": {
+      "name": "CA Osasuna",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 32,
+    "fields": {
+      "name": "Rayo Vallecano",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 33,
+    "fields": {
+      "name": "Real Betis",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 34,
+    "fields": {
+      "name": "Real Madrid",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 35,
+    "fields": {
+      "name": "Real Sociedad",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 36,
+    "fields": {
+      "name": "Sevilla FC",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 37,
+    "fields": {
+      "name": "Valencia CF",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 38,
+    "fields": {
+      "name": "Real Valladolid",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 39,
+    "fields": {
+      "name": "Villarreal CF",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 40,
+    "fields": {
+      "name": "RCD Espanyol",
+      "league": "laliga",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 41,
+    "fields": {
+      "name": "Atalanta",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 42,
+    "fields": {
+      "name": "Bologna",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 43,
+    "fields": {
+      "name": "Cagliari",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 44,
+    "fields": {
+      "name": "Como",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 45,
+    "fields": {
+      "name": "Empoli",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 46,
+    "fields": {
+      "name": "Fiorentina",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 47,
+    "fields": {
+      "name": "Genoa",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 48,
+    "fields": {
+      "name": "Hellas Verona",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 49,
+    "fields": {
+      "name": "Inter",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 50,
+    "fields": {
+      "name": "Juventus",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 51,
+    "fields": {
+      "name": "Lazio",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 52,
+    "fields": {
+      "name": "Lecce",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 53,
+    "fields": {
+      "name": "AC Milan",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 54,
+    "fields": {
+      "name": "Monza",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 55,
+    "fields": {
+      "name": "Napoli",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 56,
+    "fields": {
+      "name": "Parma",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 57,
+    "fields": {
+      "name": "Roma",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 58,
+    "fields": {
+      "name": "Torino",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 59,
+    "fields": {
+      "name": "Udinese",
+      "league": "serie_a",
+      "crest": ""
+    }
+  },
+  {
+    "model": "teams.team",
+    "pk": 60,
+    "fields": {
+      "name": "Venezia",
+      "league": "serie_a",
+      "crest": ""
+    }
+  }
+]

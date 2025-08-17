@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Noticias Fútbol Europeo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004aad;
+            color: white;
+            padding: 15px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        nav {
+            background-color: #eaeaea;
+            padding: 10px 20px;
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #004aad;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #004aad;
+        }
+        button {
+            background-color: #004aad;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00327a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Noticias de Fútbol Europeo</h1>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/create-team/">Crear Equipo</a>
+        <a href="/create-player/">Crear Jugador</a>
+        <a href="/create-article/">Crear Artículo</a>
+        <a href="/search/">Buscar Equipo</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

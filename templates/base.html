@@ -1,0 +1,81 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Fútbol Europeo{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+  <!-- Brand bar -->
+  <div class="brandbar py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+          <div class="form-check form-switch m-0 p-0">
+            <input class="form-check-input" type="checkbox" id="themeToggle" />
+            <label class="form-check-label small" for="themeToggle">Dark</label>
+          </div>
+      <a class="brand" href="{% url 'home' %}">Fútbol Europeo</a>
+      <div>
+        {% if user.is_authenticated %}
+          <span class="me-3">Hola, {{ user.username }}</span>
+          <a class="nav-link d-inline p-0 me-3" href="{% url 'profile' %}">Perfil</a>
+          <a class="nav-link d-inline p-0" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+          <a class="nav-link d-inline p-0 me-3" href="{% url 'login' %}">Login</a>
+          <a class="nav-link d-inline p-0" href="{% url 'signup' %}">Signup</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Secondary nav -->
+  <nav class="nav-secondary">
+    <div class="container">
+      <ul class="nav py-2 gap-3">
+        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Principal</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'news_list' %}">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'team_list' %}">Equipos</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'league_list' %}">Ligas</a></li>
+              </ul>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer py-4 border-top bg-white">
+    <div class="container d-flex justify-content-between">
+      <div>© {% now "Y" %} Fútbol Europeo</div>
+      <div><a class="text-decoration-none" href="{% url 'about' %}">Acerca de</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function(){
+    const root = document.documentElement;
+    const key = "fe-theme";
+    const saved = localStorage.getItem(key);
+    if(saved==="dark"){ root.setAttribute("data-theme","dark"); }
+    const toggle = document.getElementById("themeToggle");
+    if(toggle){ toggle.checked = root.getAttribute("data-theme")==="dark";
+      toggle.addEventListener("change", function(){
+        if(this.checked){ root.setAttribute("data-theme","dark"); localStorage.setItem(key,"dark"); }
+        else { root.removeAttribute("data-theme"); localStorage.setItem(key,"light"); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
