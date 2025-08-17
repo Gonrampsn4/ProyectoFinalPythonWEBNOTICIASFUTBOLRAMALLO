@@ -62,4 +62,3 @@ Para tener **Premier League (ENG)**, **Liga Española (ESP)** y **Serie A (ITA)*
   ```bash
   python manage.py load_default_leagues
   ```
-Luego podés crear más ligas desde `/ligas/`.
