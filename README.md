@@ -32,33 +32,8 @@ Abre: `http://127.0.0.1:8000/`
 - `/equipos/` → Lista de equipos
 
 
-## Cargar equipos (Premier, La Liga, Serie A)
-Opción A — **Fixture**:
-```bash
-python manage.py loaddata teams/fixtures/teams_europe_2024_25.json
-```
-
-Opción B — **Management command** (idempotente):
-```bash
-python manage.py load_europe_teams
-```
-
-En `/equipos/` podés filtrar por liga desde el selector superior.
 
 
-## Ligas
-- Nueva app `leagues` con CRUD de ligas accesible en `/ligas/` (login requerido para crear/editar/borrar).
-- `Team` ahora permite asociar una `League` mediante `league_fk` (opcional para mantener compatibilidad con el campo anterior).
-- En la lista de equipos se muestra la liga desde `league_fk` si existe.
 
 
-### Ligas pre-cargadas
-Para tener **Premier League (ENG)**, **Liga Española (ESP)** y **Serie A (ITA)** desde el inicio:
-- Opción A (fixture):
-  ```bash
-  python manage.py loaddata leagues/fixtures/default_leagues.json
-  ```
-- Opción B (management command, idempotente):
-  ```bash
-  python manage.py load_default_leagues
   ```
